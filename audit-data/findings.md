@@ -26,7 +26,7 @@
 
 ---
 
-### [S-02] Lack of Access Control in `PasswordStore::setPassword` Function
+### [H-02] Lack of Access Control in `PasswordStore::setPassword` Function
 
 **Description:** The `PasswordStore::setPassword` function is currently unprotected, lacking checks on `msg.sender`, thereby permitting any user to exploit the function and alter the password. Project documentation stipulates that only the original user who stored the password should be able to invoke this password modification feature.
 
@@ -64,7 +64,7 @@ require(msg.sender == owner);
 
 ---
 
-### [I-03] Redundant NatSpec `@param` in `PasswordStore::getPassword`
+### [I-01] Redundant NatSpec `@param` in `PasswordStore::getPassword`
 
 **Description:** The NatSpec comments for `PasswordStore::getPassword` erroneously include a `@param` tag, which is unnecessary since the function does not accept any arguments.
 
