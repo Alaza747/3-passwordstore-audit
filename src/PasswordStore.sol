@@ -23,6 +23,7 @@ contract PasswordStore {
      * @notice This function allows only the owner to set a new password.
      * @param newPassword The new password to set.
      */
+     // @audit Missing access control, anyone can set a new password
     function setPassword(string memory newPassword) external {
         s_password = newPassword;
         emit SetNetPassword();
@@ -30,6 +31,7 @@ contract PasswordStore {
 
     /*
      * @notice This allows only the owner to retrieve the password.
+     @info There is no input parameter in this function 
      * @param newPassword The new password to set.
      */
     function getPassword() external view returns (string memory) {
