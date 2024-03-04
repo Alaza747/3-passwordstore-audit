@@ -64,7 +64,7 @@ Add access control to the function `PasswordStore::setPassword` like this:
 ```
 
 
-### [I-03] NatSpec for the function `PasswordStore::getPassword` includes @param which it actually doesnt have
+### [I-03] NatSpec for the function `PasswordStore::getPassword` includes @param which it actually isn' needed
 
 **Description:** The documentation for the function `PasswordStore::getPassword` includes the @param, which shouldnt be there as the function doesnt take any inputs.
 
